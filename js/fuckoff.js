@@ -192,7 +192,7 @@ function fascinatingFuckOffRequest(name,type) {
 
 
 function showData(data){
-    var fuckoffResponse = "<p>";
+    var fuckoffResponse = "<p class='response-text'>";
     fuckoffResponse += data;
     fuckoffResponse += "</p>";
     response.innerHTML = fuckoffResponse;
