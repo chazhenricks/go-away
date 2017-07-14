@@ -9,7 +9,7 @@ function fuckOffRequest(name, noun) {
     console.log("URL IS ", `${fuckoff}/greed/${noun}/${name}`);
     return new Promise(function (resolve, reject){
         $.ajax({
-            url: `${fuckoff}/greed/${noun}/${name}`
+            url: `${fuckoff}/thumbs/${noun}/${name}`
         }).done(function(data){
             resolve(data);
         }).fail(function(error){
