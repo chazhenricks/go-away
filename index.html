@@ -2,13 +2,26 @@
 <html>
     <head>
         <title> FUCK OFF</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>What is your name?</h1>
+
+        <h2>Select a fuck</h2>
+        <select id="fuckType">
+            <option id="empty" value="empty"> - </option>
+            <option id="happy" value="mornin">Happy</option>
+            <option id="keep" value="keep">Keep</option>
+            <option id="maybe" value="maybe">Maybe</option>
+            <option id="looking" value="looking">Looking</option>
+            <option id="greed" value="greed">Greed</option>
+            <option id="fascinating" value="fascinating">Fascinating</option>
+        </select>
+
+        <h2>What is your name?</h2>
         <input id="name" type="text" placeholder="name">
 
-        <h2>Who Doesn't give a fuck?</h2>
-         <input id="noun" type="text" placeholder="noun">
+        <h2 id='who' class="hidden">Who Doesn't give a fuck?</h2>
+        <input id='noun' type='text' placeholder='noun' class="hidden">
 
         <button id="submit" type="button">Submit</button>
         <div id="response"></div>
