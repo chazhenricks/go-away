@@ -2,7 +2,9 @@ var responseDiv = document.getElementById("response");
 var sendRequest = document.getElementById("submit");
 var userName = document.getElementById("name");
 var who = document.getElementById("who");
+var great = document.getElementById("great");
 var userNoun = document.getElementById("noun");
+var userCoolGuy = document.getElementById("coolguy")
 var fuckSelect = document.getElementById("fuckType");
 var extraInfo = document.getElementById("extra");
 var fuckoff = "https://www.foaas.com";
@@ -11,14 +13,20 @@ var fuckoff = "https://www.foaas.com";
 fuckSelect.addEventListener("change", function(){
     switch(fuckSelect.value){
         case "keep":
-        case "greed": 
         who.classList.remove("hidden");
         userNoun.classList.remove("hidden");
         break;
 
+        case "greed": 
+        great.classList.remove("hidden");
+        userCoolGuy.classList.remove("hidden");
+        break;
+
+
         default: 
         who.classList.add("hidden");
         userNoun.classList.add("hidden");
+        userCoolGuy.classList.add("hidden");
     }
 });
 
@@ -56,7 +64,7 @@ sendRequest.addEventListener("click", function(){
             });
             break;
         case "greed":
-            greedFuckOffRequest(userName.value, userNoun.value, fuckSelect.value)
+            greedFuckOffRequest(userName.value, userCoolGuy.value, fuckSelect.value)
             .then(function(response){
             showData(response)
             });
@@ -194,6 +202,8 @@ function fascinatingFuckOffRequest(name,type) {
 function showData(data){
     var fuckoffResponse = "<p class='response-text'>";
     fuckoffResponse += data;
+    fuckoffResponse = fuckoffResponse.replace(/fuck/g, 'f*ck');
+    fuckoffResponse = fuckoffResponse.replace(/Fuck/g, 'F*ck');
     fuckoffResponse += "</p>";
     response.innerHTML = fuckoffResponse;
 };
